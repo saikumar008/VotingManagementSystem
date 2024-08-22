@@ -1,0 +1,53 @@
+
+
+
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <br>
+    &nbsp;&nbsp;&nbsp; <button type="button" class="btn btn-outline-primary" (click)="back5()">Go Back</button>
+      <div class="container">
+          <div class="col-md-20 text-center">
+            
+    <h2>Candidate Details</h2>
+    <br><br>
+    
+      <button type="button" class="btn btn-warning" (click)="addCandidateForm()">Add candidate</button>
+      
+      <br><br><br>
+      
+        <table class="table table-bordered" >
+            <thead>
+                <tr class="table-light">
+                    <th>Id</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                     <th>Position name</th>
+                    <th>Party photo</th>
+                    <th>Candidate photo</th>
+                    <th>Actions</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let Candidates of candidatess" class="table-dark">
+                <td>{{Candidates.candidate_id}}</td>
+                <td>{{Candidates.first_name}} </td>
+                <td>{{Candidates.last_name}} </td> 
+                <td>{{Candidates.position_name}}</td>
+                <td><img src="{{Candidates.party_photo}}" width="50%" height="50%"></td>
+                <td><img src="{{Candidates.candidate_photo}}" width="20%" height="20%"></td>
+               
+                
+                <td>
+                  <button class="btn btn-success" (click)="updateCandidate(Candidates.candidate_id)">Update</button>
+                 <br><br>
+                  <button class="btn btn-danger" (click)="deleteCandidate(Candidates.candidate_id)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+</div> 
+</div>

@@ -1,0 +1,66 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <br>
+       &nbsp;&nbsp;&nbsp; <button type="button" class="btn btn-outline-primary" (click)="back5()">Go Back</button>
+        <div class="container">
+
+            <div class="col-md-12 text-center">
+    &nbsp;<h2>Votes Details</h2>
+    <br>
+    <!-- <app-search-list (searchTextChanged)="onSearchTextEntered($event)"></app-search-list> -->
+
+    <br><br>
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>votes 101</th>
+                </tr>
+            </thead>
+    <tbody>
+        <tr *ngFor="let Votes of votes" class="table-dark" >
+          <td  *ngIf="Votes.candidate_id == 101"></td> -->
+          <!-- <td>{{Votes.max_votes}}</td>
+          </tr> --> 
+          <!-- <td>{{Votes.voters_ID}} </td>
+          <td>{{Votes.candidate_id}} </td>
+          <td>{{Votes.sno}} </td> -->
+          <!-- <td>{{Votes.max_votes}} </td> -->
+
+          <!-- <td><img src="{{Voters.voter_photo}}" width="20%" height="20%"></td> -->
+        
+      <!-- </tbody>
+      </table> -->
+      <!-- id="datatable-example" class="display" -->
+        <table class="table table-bordered">
+            <thead>
+                <tr class="table-light">
+                    <!-- <th></th> -->
+                    <th>votersID</th>
+                    
+                    <th>candidateid</th>
+                    <!-- <th>sno</th> -->
+                    <!-- <th>max_votes</th> -->
+                    
+                </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let Votes of votes" class="table-dark" >
+                <!-- <td  *ngIf="searchText === '' || Votes.candidate_id "></td> -->
+                <td>{{Votes.voters_ID}} </td>
+                
+                <td >{{Votes.candidate_id}} </td>
+                <!-- <td>{{Votes.sno}} </td> -->
+               
+               
+                
+                <!-- <td  *ngIf="Votes.candidate_id === 101 || 0"></td>
+                <td>{{ Votes.max_votes + 1 }} </td> -->
+                <!-- <td><img src="{{Voters.voter_photo}}" width="20%" height="20%"></td> -->
+              </tr> 
+            </tbody>
+        </table>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</div>
+</div>

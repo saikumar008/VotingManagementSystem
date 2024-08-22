@@ -1,0 +1,51 @@
+
+<div class="main-content" >
+  <div class="section-content section-content-p30">
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-outline-primary" (click)="back2()">Go Back</button>
+      <div class="container">
+        <br> <br> 
+          <div class="col-md-12 text-center" style="padding: 10px; border: 2px solid rgb(58, 52, 52);">
+<form #loginform="ngForm" novalidate (ngSubmit)="onSubmit()">
+    <!-- Email input -->
+
+    <div class="form-outline mb-4">
+      <label class="form-label" for="voters_ID" >Id</label>
+      <input type="text" id=" voters_ID" name=" voters_ID" class="form-control" [(ngModel)]="voterss.voters_ID" />
+      </div>
+
+    <div class="form-outline mb-4">
+      <label class="form-label" for="username" >UserName</label>
+      <input type="text" id="username" name="username" class="form-control" [(ngModel)]="voterss.username" />
+      
+    </div>
+   
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <label class="form-label" for="password" >Password</label>
+      <input type="password" id="password" name="password" class="form-control" [(ngModel)]="voterss.password" />
+      
+    </div>
+  
+    <!-- 2 column grid layout for inline styling -->
+    <div class="row mb-4">
+      <div class="col d-flex justify-content-center">
+        <!-- Checkbox -->
+        
+      </div>
+    </div>
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4" >Sign in</button>
+  
+    <!-- Register buttons -->
+    <div class="text-center">
+      <p>Not a member? <br><button type="button" class="btn btn-primary btn-block mb-4" (click)="voterregister1()">Register</button></p>
+      
+    </div>
+  </form>
+</div>
+<br><br><br>
+</div>
+</div>
+</div>

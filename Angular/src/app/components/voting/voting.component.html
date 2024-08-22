@@ -1,0 +1,96 @@
+<style>
+    /* Adding some basic styling to button */
+      
+    .btn {
+        text-decoration: none;
+        border: none;
+        padding: 12px 40px;
+        font-size: 16px;
+        background-color: green;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s all;
+    }
+    /* Adding transformation when the button is active */
+      
+    .btn:active {
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+        /* Lowering the shadow */
+    }
+</style>
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container">
+            <div class="col-md-12 text-center"><br><br>
+                <marquee direction="right" 
+                    behavior="alternate" style="border:rgb(175, 155, 155) 2px SOLID;background-color: aliceblue;"
+                    direction="right" 
+                    behavior="alternate" ><h2 
+                     style="color:red"> Fill The Details To Vote</h2></marquee>
+                &nbsp;&nbsp;
+                <!-- <table class="table table-bordered">
+                    <thead>
+                     <tr *ngFor="let Candidates of candidates">
+                      
+                        <th><img src="{{Candidates.party_photo}}" width="10%" height="10%"></th>
+                  
+                        </tr>
+                        </thead>
+                    </table> -->
+<form #voteform="ngForm" novalidate (ngSubmit)="onSubmit()">
+<table class="table table-bordered">
+    <thead>
+    <tr class="table-light">
+        <!-- <th>sno</th> -->
+        <th>Voter Id</th>
+        <th>Candidate Id</th>
+        <!-- <th>Vote</th> -->
+        <th>Vote</th>
+        
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <!-- <tr  *ngFor="let Voters of voters" class="table-dark" > -->
+            <!-- <td>{{Candidates.candidate_id}}</td> -->
+            <!-- <td><input type="text" [(ngModel)]="votess.sno" name="voters_ID" /></td> -->
+        <td><input type="text" [(ngModel)]="votess.voters_ID" name="voters_ID" /></td>
+        <!-- <td><img src="{{Candidates.party_photo}}" width="30%" height="25%"></td> -->
+        <td><select  [(ngModel)]="votess.candidate_id" name="candidate_id" >
+            <option>1</option>
+            <option>101</option>
+            <option>103</option>
+            <option>104</option>
+        </select></td>
+        <!-- <td><input type="image" src="{{Candidates.candidate_photo}}" width="20%" height="30%" (click)="counter()" class="btn"></td> -->
+        <!-- <td><button  (click)="counter()" >vote</button></td> -->
+        <!-- <td><button   (click)="counter()" [(ngModel)]="votess.max_votes" *ngIf="votess.candidate_id == candidate_id" name="max_votes">vote</button></td> -->
+        
+        <td><button class="btn btn-success" name="submit" type="submit">Vote</button></td>
+        </tr>
+    </tbody>
+</table>
+</form>
+<table class="table table-bordered">
+    <thead>
+     <tr *ngFor="let Candidates of candidates"  class="table-dark">
+        <th class="text-center">{{Candidates.candidate_id}}</th>
+        <th><img src="{{Candidates.candidate_photo}}" width="10%" height="10%"></th>
+        <th><img src="{{Candidates.party_photo}}" width="20%" height="20%"></th>
+        
+  
+        </tr>
+        </thead>
+    </table>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</div>
+</div>
+
+

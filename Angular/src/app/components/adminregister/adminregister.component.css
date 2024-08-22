@@ -1,0 +1,13 @@
+body{
+    
+    background-color: rgb(96, 175, 109);
+
+    /* Full height */
+    height: 80%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+}

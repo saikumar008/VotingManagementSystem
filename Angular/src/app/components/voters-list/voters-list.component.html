@@ -1,0 +1,35 @@
+
+
+
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <br>
+       &nbsp;&nbsp;&nbsp; <button type="button" class="btn btn-outline-primary" (click)="back4()">Go Back</button>
+        <div class="container">
+            <div class="col-md-12 text-center">
+    <h2>Voters Details</h2>
+    <br><br>
+        <table class="table table-bordered">
+            <thead>
+                <tr class="table-light">
+                    <th>Id</th>
+                    <th>firstname</th>
+                    <th>lastname</th>
+                    <th>photo</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let Voters of voters" class="table-dark">
+                <td>{{Voters.voters_ID}} </td>
+                <td>{{Voters.firstname}} </td>
+                <td>{{Voters.lastname}} </td>
+                <td><img src="{{Voters.voter_photo}}" width="20%" height="20%"></td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</div>
+</div>

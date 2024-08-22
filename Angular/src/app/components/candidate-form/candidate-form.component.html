@@ -1,0 +1,54 @@
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="col-md-30 text-center" >
+            <h3>ADD/UPDATE NEW CANDIDATE</h3>
+            <br><br>
+            <form #candidateform="ngForm" novalidate (ngSubmit)="onSubmit()" style="padding: 10px; border: 2px solid rgb(58, 52, 52);">
+                <table class="table table-table table-hover">
+                    <tbody>
+                        <tr>
+                            <td>Id:</td>
+                            <td><input type="text" name="candid" [(ngModel)]="candidatess.candidate_id" /></td>
+                        </tr>
+                        <tr><br></tr>
+                        <tr>
+                            <td>FirstName:</td>
+                            <td><input type="text" name="fname" [(ngModel)]="candidatess.first_name" /></td>
+                        </tr>
+                        <tr>
+                            <td>LastName:</td>
+                            <td><input type="text" name="lname" [(ngModel)]="candidatess.last_name" /></td>
+                        </tr>
+                        <tr>
+                            <td>candidatephoto:</td>
+                            <td><input type="text" name="lname" [(ngModel)]="candidatess.candidate_photo" /></td>
+                        </tr>
+                        <tr>
+                            <td>partyphoto:</td>
+                            <td><input type="text" name="lname" [(ngModel)]="candidatess.party_photo" /></td>
+                        </tr>
+                        <tr><br></tr>
+                        <tr>
+                            <td>Position:</td>
+                            <td>
+                               <select name="positionname" [(ngModel)]="candidatess.position_name">
+                                <option >president</option>
+                                <option >vicepresident</option>
+                               </select> 
+                            </td>
+                        </tr>
+                        <tr><br></tr>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-info" type="submit">Submit</button>
+                        
+                    </tbody>
+                </table>
+
+            </form>
+        </div>
+    </div>
+</div>
+</div>

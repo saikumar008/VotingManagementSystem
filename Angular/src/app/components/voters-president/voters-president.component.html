@@ -1,0 +1,16 @@
+<table class="table table-bordered" >
+    <thead>
+        <tr class="bg-primary">
+            <th>Id</th>
+            <th>Photo</th>
+            <th>Position name</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Candidates of candidates" class="bg-info">
+        <td>{{Candidates.candidate_id}}</td>
+        <td>{{Candidates.candidate_photo}}</td>
+        <td>{{Candidates.position_name}}</td>
+      </tr>
+    </tbody>
+</table>
